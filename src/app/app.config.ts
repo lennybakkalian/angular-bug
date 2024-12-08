@@ -8,9 +8,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideClientHydration(withEventReplay()),
-    provideAppInitializer(() => {
-      console.log('init app')
-    })
+    provideClientHydration(withEventReplay())
   ]
 };
